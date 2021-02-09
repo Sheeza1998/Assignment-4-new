@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Suggestions Page";
+}
+
+@model Assignment_4__new_.Models.Suggestions
+
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+
+<!--Setting up a form to collect user input-->
+
+<body>
+
+    <h1>We value your suggestions</h1>
+
+    <form asp-action="suggestions" method="post">
+        <div>
+            <label>User Name: </label>
+            <input asp-for="User_Name" />
+        </div>
+
+
+        <div>
+            <label>Restaurant Name: </label>
+            <input asp-for="Restuarant_Name" />
+        </div>
+
+        <div>
+            <label>Favorite Dish: </label>
+            <input asp-for="Fav_Dish" />
+        </div>
+
+        <div>
+            <label>Phone#: </label>
+            <input asp-for="Phone" />
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <div>
+            <button type="submit" onclick="validate()" asp-action="Display">See what you have suggested</button>
+        </div>
+    </form>
+</body>

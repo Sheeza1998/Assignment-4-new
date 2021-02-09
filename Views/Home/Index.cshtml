@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Welcome Page";
+}
+
+@model IEnumerable<string>
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width-device-width" />
+</head>
+<body>
+
+    <div class="text-center">
+        <h1>TOP 5 RESTUARANTS</h1>
+    </div>
+
+    <div class="text-center">
+        <img src="~/img/Restaurant_4.jpg" />
+    </div>
+
+    <br />
+    <br />
+
+    <div>
+        <ul>
+            @foreach (string R in Model)
+            {
+                <li>@R</li>
+
+            }
+        </ul>
+    </div>
+
+
+    <div class="text-center">
+        <!--Link to the suggestions page-->
+        <a class="btn-outline-secondary" asp-action="suggestions">Add your suggestions</a>
+    </div>
+
+</body>
+</html>

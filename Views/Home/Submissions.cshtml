@@ -1,0 +1,28 @@
+﻿@*
+*@
+@{
+}
+
+@model IEnumerable<Assignment_4__new_.Models.Suggestions>
+
+<div>
+    <h3>Thank you for your suggestions</h3>
+</div>
+<div>
+    <table>
+        <thead>
+            <tr><th>User Name</th><th>Restaurant Name</th><th>favorite Dish</th><th>Phone</th></tr>
+        </thead>
+        @foreach (Assignment_4__new_.Models.Suggestions x in Model)
+        {
+            <tr>
+                <td>@x.User_Name</td>
+                <td>@x.Restuarant_Name</td>
+                <td>@x.Fav_Dish</td>
+                <td>@x.Phone</td>
+            </tr>
+        }
+    </table>
+</div>
+
+
