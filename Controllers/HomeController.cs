@@ -49,7 +49,7 @@ namespace Assignment_4__new_.Controllers
         {
 
             Display.AddSuggestions(suggestions);
-            return View("Display", suggestions);
+            return RedirectToAction("Submissions");
         }
 
         public IActionResult Submissions()
