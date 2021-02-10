@@ -12,40 +12,40 @@
 <!--Setting up a form to collect user input-->
 
 <body>
+    <div class="text-md-center">
+        <h1>We value your suggestions</h1>
+    </div>
 
-    <h1>We value your suggestions</h1>
+    <br />
+    <br />
 
-    <form asp-action="suggestions" method="post">
+    <form asp-action="suggestions" method="post" class="text-center">
         <div>
-            <label>User Name: </label>
+            <label class="font-italic">User Name: </label>
             <input asp-for="User_Name" />
         </div>
-
-
+        <br />
         <div>
-            <label>Restaurant Name: </label>
+            <label class="font-italic">Restaurant Name: </label>
             <input asp-for="Restuarant_Name" />
         </div>
-
+        <br />
         <div>
-            <label>Favorite Dish: </label>
+            <label class="font-italic">Favorite Dish: </label>
             <input asp-for="Fav_Dish" />
         </div>
-
+        <br />
         <div>
-            <label>Phone#: </label>
-            <input asp-for="Phone" />
+           <!--Phone validation-->
+            @Html.LabelFor(model => model.Phone)
+            @Html.EditorFor(model => model.Phone)
+            @Html.ValidationMessageFor(model => model.Phone)
         </div>
-
         <br />
         <br />
         <br />
         <div>
-            <button type="submit" onclick="validate()" asp-action="Suggestions">See what you have suggested</button>
-        </div>
-        <div>
-            <!--Link to the suggestions page-->
-            <a class="btn-outline-secondary" asp-action="index">Go back to Restaurants</a>
+            <button type="submit" asp-action="Suggestions" class="btn btn-dark">Submissions</button> <a class="btn btn-dark" asp-action="index">Restaurants</a>
         </div>
     </form>
 </body>

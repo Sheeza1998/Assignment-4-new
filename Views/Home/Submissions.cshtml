@@ -5,32 +5,35 @@
 
 @model IEnumerable<Assignment_4__new_.Models.Suggestions>
 
-<div>
+<div class="text-center">
     <h3>Thank you for your suggestions</h3>
 </div>
+<br />
+<br />
 <div>
-    <table>
-        <thead>
-            <tr><th>User Name</th><th>Restaurant Name</th><th>favorite Dish</th><th>Phone</th></tr>
+    <!--styling the table-->
+    <table style="margin-left: auto; margin-right:auto;">
+        <thead style="text-indent:1em;">
+            <tr><th>User Name</th> <th>Restaurant Name</th> <th>Favorite Dish</th> <th>Phone</th></tr>
         </thead>
-        @foreach (Assignment_4__new_.Models.Suggestions x in Model)
-        {
-            <tr>
-                <td>@x.User_Name</td>
-                <td>@x.Restuarant_Name</td>
-                <td>@x.Fav_Dish</td>
-                <td>@x.Phone</td>
-            </tr>
-        }
+        <tbody>
+            @foreach (Assignment_4__new_.Models.Suggestions x in Model)
+            {
+                <tr style="text-indent:1em;">
+                    <td>@x.User_Name</td>
+                    <td>@x.Restuarant_Name</td>
+                    <td>@x.Fav_Dish</td>
+                    <td>@x.Phone</td>
+                </tr>
+            }
+        </tbody>
     </table>
 </div>
-
+<br />
+<br />
 <div class="text-center">
-    <a class="btn-outline-secondary" asp-action="index">Go back to restaurants</a>
+    <a class="btn btn-dark" asp-action="index">Restaurants</a> <a class="btn btn-dark" asp-action="suggestions">Suggestions</a>
 </div>
 
-<div class="text-center">
-    <a class="btn-outline-secondary" asp-action="suggestions">Go back to suggestions</a>
-</div>
 
 

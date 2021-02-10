@@ -47,9 +47,12 @@ namespace Assignment_4__new_.Controllers
         [HttpPost]
         public IActionResult Suggestions(Suggestions suggestions)
         {
-
-            Display.AddSuggestions(suggestions);
-            return RedirectToAction("Submissions");
+            if (ModelState.IsValid)
+            {
+                Display.AddSuggestions(suggestions);
+                return RedirectToAction("Submissions");
+            }
+            return View();
         }
 
         public IActionResult Submissions()

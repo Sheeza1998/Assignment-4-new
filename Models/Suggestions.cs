@@ -13,7 +13,9 @@ namespace Assignment_4__new_.Models
         public string Fav_Dish { get; set; }
 
         //validating phone number
-        [MaxLength(10)]
+        [Required(ErrorMessage = "You must provide a phone number")]
+        [DataType(DataType.PhoneNumber)]
+        [Phone]
         public string Phone { get; set; }
     }
 }

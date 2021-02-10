@@ -14,6 +14,8 @@ namespace Assignment_4__new_.Models
         public Restaurant(int Rank)
         {
             Ranking = Rank;
+            Fav_Dish = "It's all tasyt!";
+            Website = "Coming soon!";
         }
 
         [Required]
@@ -25,12 +27,12 @@ namespace Assignment_4__new_.Models
         //Setting up default values
 
         #nullable enable
-        public string? Fav_Dish { get; set; } = "It's all tasty!";
+        public string? Fav_Dish { get; set; }
         [Required]
         public string Address { get; set; }
         [Phone]
         public string? Phone { get; set; }
-        public string? Website { get; set; } = "Coming soon";
+        public string? Website { get; set; }
 
 
         //method to build array
@@ -45,14 +47,14 @@ namespace Assignment_4__new_.Models
                 Phone = "(801) 377-0062",
                 Website = "https://www.olivegarden.com/home"
             };
-
+           
             Restaurant R2 = new Restaurant(2)
             {
                 Name = "The Cheesecake Factory",
                 Fav_Dish = "Fried shrimp",
                 Address = "504 W 2230 North Provo,UT 84604",
                 Phone = "(801) 377-0062",
-                Website = "https://www.olivegarden.com/home"
+                Website = "https://www.thecheesecakefactory.com/home"
             };
 
             Restaurant R3 = new Restaurant(3)
@@ -61,7 +63,7 @@ namespace Assignment_4__new_.Models
                 Fav_Dish = "Mushroom Steak",
                 Address = "504 W 2230 North Provo,UT 84604",
                 Phone = "(801) 377-0062",
-                Website = "https://www.olivegarden.com/home"
+                Website = "https://togo.texasroadhouse.com/home"
             };
 
             Restaurant R4 = new Restaurant(4)
@@ -70,7 +72,7 @@ namespace Assignment_4__new_.Models
                 Fav_Dish = "Grilled Pineapples",
                 Address = "504 W 2230 North Provo,UT 84604",
                 Phone = "(801) 377-0062",
-                Website = "https://www.olivegarden.com/home"
+                Website = "https://www.tucanos.com/menu"
             };
 
             Restaurant R5 = new Restaurant(5)
@@ -79,7 +81,7 @@ namespace Assignment_4__new_.Models
                 Fav_Dish = "Soups",
                 Address = "504 W 2230 North Provo,UT 84604",
                 Phone = "(801) 377-0062",
-                Website = null
+                Website = "https://cafezupas.com/menu.html"
                 //checking for nullvalues
             };
 

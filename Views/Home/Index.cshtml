@@ -6,12 +6,13 @@
 
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width-device-width" />
 </head>
-<body>
 
+<body>
     <div class="text-center">
         <h1>TOP 5 RESTUARANTS</h1>
     </div>
@@ -24,10 +25,10 @@
     <br />
 
     <div>
-        <ul>
+        <ul style="padding:2%;">
             @foreach (string R in Model)
             {
-                <li>@R</li>
+                <li style="text-indent:2em;">@R</li>
 
             }
         </ul>
@@ -35,8 +36,8 @@
 
 
     <div class="text-center">
-        <!--Link to the suggestions page-->
-        <a class="btn-outline-secondary" asp-action="suggestions">Add your suggestions</a>
+        <!--Link to the suggestions and Submissions page-->
+        <a class="btn btn-dark" asp-action="suggestions">Add your suggestions</a> <a class="btn btn-dark" asp-action="Submissions">View your Submissions</a>
     </div>
 
 </body>
